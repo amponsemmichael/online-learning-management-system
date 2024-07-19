@@ -1,4 +1,8 @@
 package com.amponsem.lms_platform.repository;
 
-public class CertificateRepository {
+import com.amponsem.lms_platform.entity.Certificate;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface CertificateRepository extends MongoRepository<Certificate, String> {
 }
+
