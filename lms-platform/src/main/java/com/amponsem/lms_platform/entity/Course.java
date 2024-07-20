@@ -19,12 +19,7 @@ public class Course {
     public Course() {
 
     }
-    public Course(String id, String title, String description, String instructor) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.instructor = instructor;
-    }
+
 
 }
 

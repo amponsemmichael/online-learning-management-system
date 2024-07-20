@@ -5,18 +5,16 @@ import com.amponsem.lms_platform.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
-@RequestMapping("/api/quizes")
+@RequestMapping("/api/quizzes")
 public class QuizController {
 
     @Autowired
     private QuizService quizService;
 
     @PostMapping
-    public Quiz createQuiz(@RequestBody Quiz course) {
-        return quizService.save(course);
+    public Quiz createQuiz(@RequestBody Quiz quiz) {
+        return quizService.save(quiz);
     }
 
     @GetMapping("/{id}")
