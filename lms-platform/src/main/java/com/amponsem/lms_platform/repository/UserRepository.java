@@ -1,10 +1,8 @@
 package com.amponsem.lms_platform.repository;
 
-import com.amponsem.lms_platform.entity.User;
+import com.amponsem.lms_platform.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import java.util.Optional;
 
 public interface UserRepository extends MongoRepository<User, String> {
-    Optional<User> findByUsername(String username);
+    User findByUsername(String username);
 }
-

@@ -8,6 +8,7 @@ class LmsPlatformApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
