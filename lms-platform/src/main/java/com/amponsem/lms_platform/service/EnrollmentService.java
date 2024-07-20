@@ -5,6 +5,8 @@ import com.amponsem.lms_platform.repository.EnrollmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EnrollmentService {
 
@@ -21,5 +23,9 @@ public class EnrollmentService {
 
     public void deleteById(String id) {
         enrollmentRepository.deleteById(id);
+    }
+
+    public List<Enrollment> getAllEnrollments() {
+        return enrollmentRepository.findAll();
     }
 }
