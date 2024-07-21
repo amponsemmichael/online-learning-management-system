@@ -3,14 +3,22 @@ package com.amponsem.lms_platform.controller;
 import com.amponsem.lms_platform.entity.Enrollment;
 import com.amponsem.lms_platform.service.EnrollmentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/api/enrollments")
+@RequestMapping("/api")
 public class EnrollmentController {
 
     @Autowired
     private EnrollmentService enrollmentService;
+
+    @GetMapping("/enrollments")
+    public ResponseEntity<List<Enrollment>> getAllEnrollments() {
+        return ResponseEntity.ok(enrollmentService.getAllEnrollments());
+    }
 
     @PostMapping
     public Enrollment createEnrollment(@RequestBody Enrollment enrollment) {
